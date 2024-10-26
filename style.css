@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    text-align: left;
+}
+
+ .header-text {
+    margin-right: 30px
+} 
+
+.student-photo {
+    border-radius: 10px;
+    width: 150px;
+    height: auto;
+}
+
+#viewer {
+    width: 80%;
+    height: 1000px;
+    margin-top: 20px;
+}

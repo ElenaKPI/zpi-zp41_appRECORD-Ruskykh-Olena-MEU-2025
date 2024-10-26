@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звітний документ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1>ЗВІТИ З ЛАБОРОТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ "ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h2>
+            <p>Студентки групи ЗПІ-зп41 Руських Олени Василівни</p>
+        </div>
+        <div>
+            <img src="Sources/Images/avatar.JPG" alt="Руських Олена" class="student-photo" height="200">
+        </div>
+    </div>
+    
+    <div>
+        <button onclick="loadDocument('lab1.html')">Лабораторна робота № 1.1</button>
+        <button onclick="loadDocument('lab1_2.html')">Лабораторна робота № 1.2</button>
+        <button onclick="loadDocument('lab2_1.html')">Лабораторна робота № 2.1</button>
+        <button onclick="loadDocument('lab2_2.html')">Лабораторна робота № 2.2</button>
+        <button onclick="loadDocument('lab3_1.html')">Лабораторна робота № 3.1</button>
+        <button onclick="loadDocument('lab3_2.html')">Лабораторна робота № 3.2</button>
+        <button onclick="loadDocument('lab4_1.html')">Лабораторна робота № 4.1</button>
+        <button onclick="loadDocument('lab4_2.html')">Лабораторна робота № 4.2</button>
+    </div>
+
+    <iframe id="viewer" src="" frameborder="0"></iframe>
+
+    <script>
+        function loadDocument(url) {
+            document.getElementById('viewer').src = url;
+        }
+    </script>
+</body>
+</html>
