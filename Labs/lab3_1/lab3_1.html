@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота № 3.1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            height: 90vh;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .output-area {
+            flex-grow: 1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" onclick="loadSection('lab3_1_topic.html')">Тема, Мета, Місце розташування ЛР #3.1</a>
+            <a href="#" onclick="loadSection('lab3_1_task1.html')">ЗАВДАВННЯ №1</a>
+            <a href="#" onclick="loadSection('lab3_1_task2.html')">ЗАВДАВННЯ №2</a>
+            <a href="#" onclick="loadSection('lab3_1_task3.html')">ЗАВДАВННЯ №3</a>
+            <a href="#" onclick="loadSection('lab3_1_task4.html')">ЗАВДАВННЯ №4</a>
+            <a href="#" onclick="loadSection('lab3_1_task5.html')">ЗАВДАВННЯ №5</a>
+            <a href="#" onclick="loadSection('lab3_1_conclusion.html')">ВИСНОВКИ</a>
+        </div>
+
+        <div class="output-area">
+            <iframe id="section-viewer" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        function loadSection(url) {
+            document.getElementById('section-viewer').src = url;
+        }
+    </script>
+</body>
+</html>
