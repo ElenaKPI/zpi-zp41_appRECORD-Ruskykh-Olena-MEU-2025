@@ -13,7 +13,7 @@
             align-items: flex-start;
             height: 100vh;
         }
-        .container {
+        main {
             display: flex;
             width: 80%;
             height: 90vh;
@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <main>
         <div class="sidebar">
             <a href="#" onclick="loadSection('lab1_description.html')">Опис предметного середовища</a>
             <a href="#" onclick="loadSection('lab1_topic.html')">Тема, Мета, Місце розташування ЛР #1</a>
@@ -68,7 +68,7 @@
         <div class="output-area">
             <iframe id="section-viewer" src=""></iframe>
         </div>
-    </div>
+    </main>
 
     <script>
         function loadSection(url) {
