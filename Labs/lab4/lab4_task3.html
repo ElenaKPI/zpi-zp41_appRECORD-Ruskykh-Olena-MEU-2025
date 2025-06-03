@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАВДАВННЯ №3</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+     <div class="task-container">
+        <h2>ЗАВДАННЯ №3</h2>
+        <input type="text" id="passwordInput" placeholder="пароль">
+        <button id="toggleButton">Приховати</button>
+    </div>
+    <br>
+    <img src="../../Sources/Images/LR7/task3Result1.png" width="400">
+    <br>
+    <img src="../../Sources/Images/LR7/task3Result2.png" width="400">
+    <br>
+    <img src="../../Sources/Images/LR7/task3Code.png" width="400">
+    <script>
+    const input = document.getElementById('passwordInput');
+    const button = document.getElementById('toggleButton');
+
+    button.addEventListener('click', () => {
+        if (input.type === 'password') {
+            input.type = 'text';
+            button.textContent = 'Приховати'; 
+        } else {
+            input.type = 'password';
+            button.textContent = 'Розкрити'; 
+        }
+    });
+    </script>
+</body>
+</html>

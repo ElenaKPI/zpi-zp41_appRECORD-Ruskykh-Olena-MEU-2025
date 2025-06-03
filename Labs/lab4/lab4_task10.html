@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЗАВДАННЯ №10</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div id="controls">
+        <input type="number" min="1" max="100" step="1" />
+        <button type="button" data-create>Create</button>
+        <button type="button" data-destroy>Destroy</button>
+    </div>
+    <div id="boxes"></div>
+
+    <br>
+    <img src="../../Sources/Images/LR7/task10Code.png" width="400">
+
+    <script>
+        function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215)
+                .toString(16)
+                .padStart(6, '0')}`;
+        }
+
+        const input = document.querySelector('#controls input');
+        const createBtn = document.querySelector('[data-create]');
+        const destroyBtn = document.querySelector('[data-destroy]');
+        const boxesContainer = document.getElementById('boxes');
+
+        createBtn.addEventListener('click', () => {
+            const amount = Number(input.value);
+
+            if (amount < 1 || amount > 100) {
+                alert('Please enter a number between 1 and 100');
+                return;
+            }
+
+            destroyBoxes();
+            createBoxes(amount);
+            input.value = ''; 
+        });
+
+        destroyBtn.addEventListener('click', destroyBoxes);
+
+        function createBoxes(amount) {
+            const baseSize = 30;
+            for (let i = 0; i < amount; i++) {
+                const box = document.createElement('div');
+                const size = baseSize + i * 10;
+                box.style.width = `${size}px`;
+                box.style.height = `${size}px`;
+                box.style.backgroundColor = getRandomHexColor();
+                boxesContainer.appendChild(box);
+            }
+        }
+
+        function destroyBoxes() {
+            boxesContainer.innerHTML = '';
+        }
+    </script>
+</body>
+</html>
