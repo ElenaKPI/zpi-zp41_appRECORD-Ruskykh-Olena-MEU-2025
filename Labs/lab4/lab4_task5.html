@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАВДАННЯ №5</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="taskTitle">ЗАВДАННЯ 5</div>
+    <div id="place"></div>
+    <br>
+    <img src="../../Sources/Images/LR7/task5Console.png" width="400">
+    <br>
+    <img src="../../Sources/Images/LR7/task5Code.png" width="400">
+
+    <script>
+        window.addEventListener('click', function(event) {
+            const placeDiv = document.getElementById('place');
+            const clickedInside = placeDiv.contains(event.target);
+            console.log(clickedInside);
+        });
+    </script>
+</body>
+</html>

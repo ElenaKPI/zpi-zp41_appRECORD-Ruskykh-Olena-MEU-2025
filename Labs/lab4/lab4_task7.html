@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАВДАННЯ №7</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+ <ul id="categories">
+        <li class="item">
+            <h2>Animals</h2>
+            <ul>
+                <li>Cat</li>
+                <li>Hamster</li>
+                <li>Horse</li>
+                <li>Parrot</li>
+            </ul>
+        </li>
+        <li class="item">
+            <h2>Products</h2>
+            <ul>
+                <li>Bread</li>
+                <li>Prasley</li>
+                <li>Cheese</li>
+            </ul>
+        </li>
+        <li class="item">
+            <h2>Technologies</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <img src="../../Sources/Images/LR7/task7Console.png" width="400">
+    <br>
+    <img src="../../Sources/Images/LR7/task7Code.png" width="400">
+
+    <script>
+        const categoriesList = document.querySelectorAll('#categories .item');
+        console.log('Number of categories:', categoriesList.length);
+
+        categoriesList.forEach(category => {
+            const title = category.querySelector('h2').textContent;
+            const items = category.querySelectorAll('ul li');
+            console.log('Category:', title);
+            console.log('Elements:', items.length);
+        });
+    </script>
+</body>
+</html>
